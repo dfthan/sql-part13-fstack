@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { Sequelize, QueryTypes, json } = require('sequelize')
+const { Sequelize, QueryTypes, DataTypes } = require('sequelize')
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialectOptions: {
@@ -9,6 +9,7 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
         }
     },
 })
+
 
 const main = async () => {
     try {
