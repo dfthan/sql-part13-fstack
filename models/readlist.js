@@ -7,8 +7,8 @@ class Readlist extends Model { }
 Readlist.init({
     id: {
         type: DataTypes.INTEGER,
+        autoIncrement: true,
         primaryKey: true,
-        autoincrement: true
     },
     blogId: {
         type: DataTypes.INTEGER,
@@ -20,7 +20,6 @@ Readlist.init({
     },
     read: {
         type: DataTypes.BOOLEAN,
-        allowNull: false,
         defaultValue: false
     }
 }, {
